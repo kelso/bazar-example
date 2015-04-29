@@ -12,10 +12,15 @@
 <% end %>
 
 <%= form_for @ad do |f| %>
-  <%= f.label :title %>
+  <p>
+  <%= f.label :title %><br>
   <%= f.text_field :title %>
+  </p>
 
-  <br>
+  <p>
+  <%= f.label :description %><br>
+  <%= f.text_area :description, size: '50x5' %>
+  </p>
 
   <p>
   <%= f.label :email %><br>

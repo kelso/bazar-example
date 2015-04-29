@@ -7,3 +7,12 @@ body {
   margin-bottom: 20px;
   padding: 10px 20px;
 }
+
+.box {
+  position: relative;
+}
+.open-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

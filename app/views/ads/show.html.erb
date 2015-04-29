@@ -1,2 +1,12 @@
-<h1>Ads#show</h1>
-<p>Find me in app/views/ads/show.html.erb</p>
+<h1><%= @ad.title %></h1>
+
+<div class='box'>
+  <h3><%= @ad.title %></h3>
+  <p><%= @ad.description %></p>
+  <p><%= mail_to @ad.email, @ad.email %></p>
+  <p><em>Pridane: <%= l @ad.created_at, format: :short %></em></p>
+</div>
+
+<p>
+  <%= link_to "Vrátiť sa naspäť", ads_path %>
+</p>
