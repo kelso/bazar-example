@@ -1,0 +1,26 @@
+<h1>Pridať inzerát</h1>
+
+<% if @ad.errors.any? %>
+  <div id="error_explanation">
+
+    <ul>
+    <% @ad.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_for @ad do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <br>
+
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+
+  <br>
+
+  <%= f.submit "Odoslať" %>
+<% end %>
