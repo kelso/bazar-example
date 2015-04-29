@@ -22,4 +22,10 @@ class AdsController < ApplicationController
 
   def edit
   end
+
+  def contact
+    ad = Ad.find params[:ad_id]
+    AdMailer.contact_email(ad, params[:message]).deliver
+    redirect_to ads_url
+  end
 end

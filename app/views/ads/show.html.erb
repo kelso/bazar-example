@@ -10,3 +10,14 @@
 <p>
   <%= link_to "Vrátiť sa naspäť", ads_path %>
 </p>
+
+<h3>Kontaktovat inzerenta</h3>
+<%= form_tag action: 'contact' do %>
+  <%= hidden_field_tag :ad_id, @ad.id %>
+  <p>
+    <%= label_tag :message %><br>
+    <%= text_area_tag :message, nil, size: '60x3' %>
+  </p>
+
+  <%= submit_tag "Odoslať správu" %>
+<% end %>
