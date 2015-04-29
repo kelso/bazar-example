@@ -11,7 +11,7 @@ class AdsController < ApplicationController
   end
 
   def create
-    @ad = Ad.new params[:ad].permit(:title, :description)
+    @ad = Ad.new params[:ad].permit(:title, :description, :email)
     if @ad.save
       redirect_to ads_url
     else
