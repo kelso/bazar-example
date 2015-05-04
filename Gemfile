@@ -44,3 +44,12 @@ group :development, :test do
 end
 
 gem "letter_opener", :group => :development
+
+
+gem 'activeadmin', github: 'activeadmin'
+
+# Plus integrations with:
+gem 'devise'
+gem 'cancan' # or cancancan
+gem 'draper'
+gem 'pundit'

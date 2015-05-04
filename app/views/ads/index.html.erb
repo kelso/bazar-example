@@ -7,7 +7,6 @@
     <%= link_to image_tag('arrow_right.png', class: 'open-icon'), ad_path(ad) %>
     <h3><%= ad.title %></h3>
     <p><%= ad.description %></p>
-    <p><%= mail_to ad.email, ad.email %></p>
     <p><em>Pridane: <%= l ad.created_at, format: :short %></em></p>
   </div>
 <% end %>
